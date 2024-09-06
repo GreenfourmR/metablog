@@ -28,7 +28,7 @@ const Headerpostlayout = () => {
             <button>View All</button>
           </div>
         </div>
-        <div className="w-full grid grid-cols-3 justify-center items-center gap-[20px]">
+        <div className="w-full grid grid-cols-3 grid-rows-3 justify-center items-center gap-[20px]">
           {articles.map((article) => {
             return <Cards article={article} />;
           })}

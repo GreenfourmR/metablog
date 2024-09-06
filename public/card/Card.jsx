@@ -8,7 +8,9 @@ const Card = ({ article }) => {
           height: "320px",
           borderRadius: "12px",
         }}
-      ></div>
+      >
+        <div className=""></div>
+      </div>
     </div>
   );
 };
