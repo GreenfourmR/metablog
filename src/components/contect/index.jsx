@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Baruunsum from "../../../public/Item/baruunsum";
 import Zuunsum from "../../../public/Item/Zuunsum";
 import Trending from "./trending/Trending";

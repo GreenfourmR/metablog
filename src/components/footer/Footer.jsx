@@ -3,6 +3,7 @@ import In from "../../../public/Item/in";
 import Instagram from "../../../public/Item/Instagrem";
 import LogoM from "../../../public/Item/LogoM";
 import Twitter from "../../../public/Item/twitter";
+import Link from "next/link";
 
 export const Footer = () => {
   return (
@@ -24,24 +25,42 @@ export const Footer = () => {
         </div>
         <div className="flex">
           <div className="w-auto max-h-[88px] flex flex-col gap-2">
-            <p>Home</p>
-            <p>Blog</p>
-            <p>Contact</p>
+            <Link href="/home">
+              <p>Home</p>
+            </Link>
+            <Link href="/blog-us">
+              <p>Blog</p>
+            </Link>
+
+            <Link href="/contact-us">
+              <p>Contact</p>
+            </Link>
           </div>
         </div>
         <div>
           <div className="flex gap-[27px]">
-            <Facebook />
-            <Twitter />
-            <Instagram />
-            <In />
+            <Link href="https://www.facebook.com/">
+              <Facebook />
+            </Link>
+            <Link href="https://www.instagram.com">
+              <Instagram />
+            </Link>
+            <Link href="https://x.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJteCI6IjIifQ%3D%3D%22%7D">
+              <Twitter />
+            </Link>
+            <Link href="https://www.linkedin.com">
+              <In />
+            </Link>
           </div>
         </div>
       </div>
       <div className="w-full h-auto border"></div>
       <div className="flex h-auto w-full py-[32px] gap-[64px]">
         <div className="flex w-full gap-[10px]">
-          <LogoM />
+          <Link href="/home">
+            <LogoM />
+          </Link>
+
           <div>
             <p>MetaBlog</p>
             <p>© All Rights Reserved.</p>

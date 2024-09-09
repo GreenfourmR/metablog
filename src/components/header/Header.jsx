@@ -7,10 +7,15 @@ export const Header = () => {
     <main className="">
       <div className="flex w-full m-auto px-[352px] pt-[64px]">
         <div className="flex justify-between items-center w-full">
-          <Logo />
+          <Link href="/home">
+            <Logo />
+          </Link>
+
           <div className="flex justify-center items-center w-full h-auto gap-10">
-            <p>Home</p>
-            <Link href="/blog-list">
+            <Link href="/home">
+              <p>Home</p>
+            </Link>
+            <Link href="/blog-us">
               <p>Blog</p>
             </Link>
 
