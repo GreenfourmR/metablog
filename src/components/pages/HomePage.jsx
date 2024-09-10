@@ -11,6 +11,7 @@ export const HomePage = () => {
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
+  
   // const handleClickLoadMore = () => {
   //   setPage(page + 1);
   // };

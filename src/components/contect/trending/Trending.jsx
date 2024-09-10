@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "../../../../public/card/Card";
+import Link from "next/link";
 
 const Trending = () => {
   const [articles, setArticles] = useState([]);
@@ -16,7 +17,11 @@ const Trending = () => {
       <div className="w-full max-h-[28px]">Trending</div>
       <div className="w-full grid grid-cols-4 justify-center items-center gap-[20px]">
         {articles.map((article) => {
-          return <Card article={article} />;
+          return (
+            <Link href={`/blog-us/${article.id}`}>
+              <Card article={article} />;
+            </Link>
+          );
         })}
       </div>
     </div>
