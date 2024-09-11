@@ -4,20 +4,20 @@ import { Search } from "../../../public/Item/search-outline";
 import Link from "next/link";
 
 export const Header = () => {
-  const [articles, setArticles] = useState([]);
-  const [searchValue, setSearchValue] = useState([]);
-  const fetch = () => {
-    fetch(`https://dev.to/api/articles`)
-      .then((response) => response.json)
-      .then((data) => setArticles(data));
-  };
-  const handleInputChange = (e) => {
-    const searchString = e.target.value;
-    setSearchValue(searchString.trim().toLowerCase());
-  };
-  useEffect(() => {
-    fetchdata();
-  }, []);
+    // const [articles, setArticles] = useState([]);
+    // const [searchValue, setSearchValue] = useState([]);
+    // const fetch = () => {
+    //   fetch(`https://dev.to/api/articles`)
+    //     .then((response) => response.json)
+    //     .then((data) => setArticles(data));
+    // };
+    // const handleInputChange = (e) => {
+    //   const searchString = e.target.value;
+    //   setSearchValue(searchString.trim().toLowerCase());
+    // };
+    // useEffect(() => {
+    //   fetchdata();
+    // }, []);
   return (
     <main className="">
       <div className="flex w-full m-auto px-[352px] pt-[64px]">

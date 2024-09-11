@@ -16,7 +16,7 @@ const SinglePage = () => {
     fetchData();
   }, [article]);
   return (
-    <div>
+    <div className="flex flex-col h-auto w-full gap-[100px]">
       <Header />
       <SinglePost article={article} />
       <Footer />

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "../../../../public/card/Card";
+import Card from "../../card/Card";
 import Link from "next/link";
 
 const Trending = () => {
@@ -19,7 +19,7 @@ const Trending = () => {
         {articles.map((article) => {
           return (
             <Link href={`/blog-us/${article.id}`}>
-              <Card article={article} />;
+              <Card article={article} />
             </Link>
           );
         })}

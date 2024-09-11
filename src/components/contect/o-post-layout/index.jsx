@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Cards from "../../../../public/card/cards";
+import Cards from "../../card/cards";
 
 const Headerpostlayout = () => {
   const [articles, setArticles] = useState([]);
