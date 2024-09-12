@@ -6,6 +6,8 @@ import { Header } from "../header/Header";
 export const BlogListPage = () => {
   const [articles, setArticles] = useState([]);
   const [page, setPage] = useState(1);
+
+  
   const fetchData = () => {
     fetch(`https://dev.to/api/articles?per_page=9&&top=${page}`)
       .then((response) => response.json())

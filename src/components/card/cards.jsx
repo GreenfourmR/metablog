@@ -32,7 +32,7 @@ const Cards = ({ article }) => {
   return (
     <div className="flex w-full h-full">
       <div className="gap-4 flex-col flex w-full h-full border border-[#E8E8EA] rounded-xl py-4 px-4 ">
-        <div className="flex flex-col border rounded-md h-full">
+        <div className="flex flex-col rounded-md h-full">
           <div className="flex flex-col gap-4">
             <div
               style={{

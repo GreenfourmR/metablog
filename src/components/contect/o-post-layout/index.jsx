@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
 import Cards from "../../card/cards";
+import Link from "next/link";
 
 const Headerpostlayout = () => {
   const [articles, setArticles] = useState([]);
   const fetchData = () => {
-    fetch(`https://dev.to/api/articles?per_page=9&&top=2`)
+    fetch(`https://dev.to/api/articles?per_page=9&&top=1`)
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
@@ -25,7 +26,9 @@ const Headerpostlayout = () => {
             <button>Branding</button>
           </div>
           <div className="flex w-[65%] justify-end items-center">
-            <button>View All</button>
+            <Link href="/blog-us">
+              <button>View All</button>
+            </Link>
           </div>
         </div>
         <div className="w-full grid grid-cols-3 grid-rows-3 justify-center items-center gap-[20px]">
