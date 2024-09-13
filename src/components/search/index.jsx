@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BlogListPage } from "../pages/BlogListing";
 
 export const SearchDropDwon = ({ filteredArticles, searchValue }) => {
   filteredArticles.length = 5;

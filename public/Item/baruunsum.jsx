@@ -1,4 +1,4 @@
-const Baruunsum = () => {
+const Chevronright = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -16,4 +16,4 @@ const Baruunsum = () => {
     </svg>
   );
 };
-export default Baruunsum;
+export default Chevronright;

@@ -3,7 +3,7 @@ export const Bigshow = ({ articles }) => {
     <div className="flex flex-col w-full h-auto">
       <div
         style={{
-          backgroundImage: `url(${articles?.cover_image})`,
+          backgroundImage: `url(${articles[1]?.cover_image})`,
           width: "100%",
           height: "100%",
           borderRadius: "12px",
