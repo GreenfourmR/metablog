@@ -11,7 +11,7 @@ export const HomePage = () => {
       .then((response) => response.json())
       .then((data) => setArticles(data));
   };
-  
+
   // const handleClickLoadMore = () => {
   //   setPage(page + 1);
   // };
@@ -21,7 +21,7 @@ export const HomePage = () => {
   // console.log(articles, "ajillah");
 
   return (
-    <div className="flex flex-col gap-[100px]">
+    <div className="flex flex-col gap-[100px] ">
       <Header />
       <Contect articles={articles} />
       <Footer />

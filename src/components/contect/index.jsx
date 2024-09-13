@@ -3,6 +3,7 @@ import Headerpostlayout from "./o-post-layout";
 import { useState, useEffect } from "react";
 import Chevronleft from "../../../public/Item/Chevronleft";
 import Chevronright from "../../../public/Item/baruunsum";
+import Link from "next/link";
 
 export const Contect = () => {
   const [article, setArticles] = useState([]);
@@ -39,20 +40,26 @@ export const Contect = () => {
     <main className="">
       <div className="flex flex-col w-full h-auto px-[352px] pt-[64px] gap-[100px]">
         <div className="flex flex-col max-h-[651px] w-full ">
-          <div
-            className="flex flex-col lg:flex-col-reverse lg:justify-start justify-end min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] 2xl:min-h-[600px] w-auto rounded-xl bg-cover bg-center  bg-[#14162466] bg-blend-soft-light"
-            style={{
-              backgroundImage: `url(${article[currentIndex]?.cover_image})`,
-            }}
-          >
-            <div className="flex w-[40%] relative bg-white left-5 bottom-4 rounded-md ">
-              <div className="flex justify-center items-center rounded-md bg-blue-500 text-white p-2">
-                {article[currentIndex]?.title}
+          <Link href={`/blog-us/${article[currentIndex]?.id}`}>
+            <div
+              className="flex flex-col lg:flex-col-reverse lg:justify-start justify-end min-h-[350px] lg:min-h-[400px] xl:min-h-[500px] 2xl:min-h-[600px] w-auto rounded-xl bg-cover bg-center  bg-[#14162466] bg-blend-soft-light"
+              style={{
+                backgroundImage: `url(${article[currentIndex]?.cover_image})`,
+              }}
+            >
+              <div className="flex w-[40%] flex-col relative items-start justify-between bg-white left-5 bottom-4 rounded-md p-6 ">
+                <div className="flex justify-center items-center w-[100px] rounded-md bg-blue-500 text-white ">
+                  {article[currentIndex]?.type_of}
+                </div>
+                <div className="flex justify-start items-center text-[36px]">
+                  {article[currentIndex]?.title}
+                </div>
+                <div className="flex justify-start items-center">
+                  {article[currentIndex]?.last_comment_at}
+                </div>
               </div>
-              <div></div>
-              <div></div>
             </div>
-          </div>
+          </Link>
           <div className="max-h-auto w-full flex justify-end items-end">
             <button
               onClick={handleLeft}

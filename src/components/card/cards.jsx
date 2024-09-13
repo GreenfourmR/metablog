@@ -32,7 +32,7 @@ const Cards = ({ article }) => {
   return (
     <div className="flex w-full h-full">
       <div className="gap-4 flex-col flex w-full h-full border border-[#E8E8EA] rounded-xl py-4 px-4 ">
-        <div className="flex flex-col rounded-md h-full">
+        <div className="flex flex-col rounded-md h-full gap-3">
           <div className="flex flex-col gap-4">
             <div
               style={{
@@ -51,10 +51,26 @@ const Cards = ({ article }) => {
               </p>
             </div>
           </div>
-          <p className=" text-[#97989F]">
-            {publishedDate.getFullYear()}-
-            {generatMonth(publishedDate.getMonth())}-{publishedDate.getDay()}
-          </p>
+          <div className="flex gap-5">
+            <div className="flex gap-3">
+              <div
+                className="flex rounded-[50px] w-2 h-2"
+                style={{
+                  backgroundImage: `url(${article.user.profile_image})`,
+                  width: "30px",
+                  height: "30px",
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  borderRadius: "50%",
+                }}
+              ></div>
+              <div>{article?.user.name}</div>
+            </div>
+            <p className=" text-[#97989F]">
+              {publishedDate.getFullYear()}-
+              {generatMonth(publishedDate.getMonth())}-{publishedDate.getDay()}
+            </p>
+          </div>
         </div>
       </div>
     </div>
