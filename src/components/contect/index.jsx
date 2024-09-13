@@ -8,6 +8,7 @@ import Link from "next/link";
 export const Contect = () => {
   const [article, setArticles] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [handleClickMore, setHandleClickMore] = useState();
 
   const handleLeft = () => {
     setCurrentIndex((currentIndex) => {
@@ -27,6 +28,11 @@ export const Contect = () => {
       }
     });
   };
+  const handleClickLoadMore = () => {
+    setHandleClickMore((handleClickMore) => {
+      setHandleClickMore(handleClickMore + 3);
+    });
+  };
 
   const fetchData = () => {
     fetch(`https://dev.to/api/articles?per_page=30&top=7`)
@@ -35,7 +41,7 @@ export const Contect = () => {
   };
   useEffect(() => {
     fetchData();
-  }, [article]);
+  }, [article, handleClickLoadMore]);
   return (
     <main className="">
       <div className="flex flex-col w-full h-auto px-[352px] pt-[64px] gap-[100px]">
@@ -78,8 +84,14 @@ export const Contect = () => {
         <div className="h-auto w-full flex justify-start items-start">
           <Trending />
         </div>
-        <div className="h-auto w-full flex justify-center items-start">
+        <div className="h-auto w-full flex justify-center items-center flex-col gap-10">
           <Headerpostlayout />
+          <button
+            className="flex justify-center items-center text-[36px] rounded-xl hover:bg-slate-200 p-4"
+            onClick={handleClickLoadMore}
+          >
+            More
+          </button>
         </div>
       </div>
     </main>

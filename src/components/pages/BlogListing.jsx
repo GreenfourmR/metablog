@@ -7,7 +7,6 @@ export const BlogListPage = () => {
   const [articles, setArticles] = useState([]);
   const [page, setPage] = useState(1);
 
-  
   const fetchData = () => {
     fetch(`https://dev.to/api/articles?per_page=9&&top=${page}`)
       .then((response) => response.json())
@@ -24,7 +23,7 @@ export const BlogListPage = () => {
       <Header />
       <main className="">
         <div className="flex flex-col w-full h-auto px-[352px] pt-[64px] gap-[100px]">
-          <div className="h-auto w-full flex justify-center items-start">
+          <div className="h-auto w-full flex justify-center items-start bg-black">
             <Headerpostlayout
               handleClickLoadMore={handleClickLoadMore}
               articles={articles}
